@@ -9,7 +9,9 @@ sed -i 's/192.168.1.1/192.168.1.3/g' package/base-files/files/bin/config_generat
 # sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-123'' package/lean/default-settings/files/zzz-default-settings
 
 #默认不使用防火墙策略
-sed -i 's/iptables/# iptables/g' package/base-files/files/etc/firewall.user
+echo "sed -i 's/iptables/# iptables/g' /etc/firewall.user">rc.local
+echo "/etc/init.d/firewall restart">rc.local
+echo "exit 0">rc.local
 
 
 # 版本号里显示一个自己的名字（281677160 build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）

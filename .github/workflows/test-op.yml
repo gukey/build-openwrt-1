@@ -122,7 +122,7 @@ jobs:
         cd openwrt
         git clone https://github.com/xiaorouji/openwrt-passwall  package/passwall
         cd package/passwall
-        git checkout 470d1d4e5c3aeb05a7457c02a16c3df5f5384cc3
+        git checkout 5bb3293
         cd $OLDPWD
         if [ -f "build/${{matrix.target}}/$DIY_P1_SH" ]; then
           chmod +x build/${{matrix.target}}/$DIY_P1_SH

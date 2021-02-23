@@ -16,8 +16,8 @@ sed -i 's/192.168.1.1/192.168.1.3/g' package/base-files/files/bin/config_generat
 
 #rm package/network/config/firewall/files/firewall.user
 
-echo "/etc/init.d/firewall disable">>package/base-files/files/etc/rc.local
-echo "/etc/init.d/firewall stop">>package/base-files/files/etc/rc.local
+#echo "/etc/init.d/firewall disable">>package/base-files/files/etc/rc.local
+echo "/etc/init.d/firewall restart">>package/base-files/files/etc/rc.local
 echo "/etc/init.d/unblockmusic restart">>package/base-files/files/etc/rc.local
 echo "exit 0">>package/base-files/files/etc/rc.local
 

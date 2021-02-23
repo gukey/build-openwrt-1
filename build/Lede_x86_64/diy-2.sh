@@ -12,7 +12,13 @@ sed -i 's/192.168.1.1/192.168.1.3/g' package/base-files/files/bin/config_generat
 #echo "sed -i 's/iptables/# iptables/g' /etc/firewall.user">package/base-files/files/etc/rc.local
 #echo "/etc/init.d/firewall restart">>package/base-files/files/etc/rc.local
 #echo "exit 0">>package/base-files/files/etc/rc.local
-rm package/network/config/firewall/files/firewall.user
+
+
+#rm package/network/config/firewall/files/firewall.user
+
+echo "/etc/init.d/firewall restart">>package/base-files/files/etc/rc.local
+echo "/etc/init.d/unblockmusic restart">>package/base-files/files/etc/rc.local
+echo "exit 0">>package/base-files/files/etc/rc.local
 
 # 版本号里显示一个自己的名字（281677160 build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
 sed -i "s/OpenWrt /281677160 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings

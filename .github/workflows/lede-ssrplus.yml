@@ -122,7 +122,7 @@ jobs:
       run: |
         cp -Rf `find ./ -maxdepth 1 -type d ! -path './openwrt' ! -path './'` openwrt
         cd openwrt
-        git clone --depth=1 https://github.com/fw876/helloworld.git  package/helloworld
+        #git clone --depth=1 https://github.com/fw876/helloworld.git  package/helloworld
         source common/common.sh && Diy_all
         if [ ${{matrix.target}} != "openwrt" ]; then
           if [ "${REPO_URL}" == "https://github.com/coolsnowwolf/lede" ]; then

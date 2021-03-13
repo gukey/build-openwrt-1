@@ -7,7 +7,7 @@ index 0939306..446ade3 100644
  				set network.$1.ipaddr='$ipad'
  				set network.$1.netmask='$netm'
 +				set network.$1.gateway='192.168.1.1'
-+				set network.$1.dns='192.168.1.5'
++				set network.$1.dns='127.0.0.1'
 +				set network.$1.broadcast='192.168.1.255'
  			EOF
  			[ -e /proc/sys/net/ipv6 ] && uci set network.$1.ip6assign='60'

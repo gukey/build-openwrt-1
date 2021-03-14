@@ -9,10 +9,10 @@ sed -i 's/192.168.1.1/192.168.1.3/g' package/base-files/files/bin/config_generat
 # sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-123'' package/lean/default-settings/files/zzz-default-settings
 
 #默认不使用防火墙策略
-echo "sed -i  '/iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53/d' /etc/firewall.user">package/base-files/files/etc/rc.local
-echo "sed -i  '/iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53/d' /etc/firewall.user">>package/base-files/files/etc/rc.local
-echo "/etc/init.d/firewall restart">>package/base-files/files/etc/rc.local
-echo "exit 0">>package/base-files/files/etc/rc.local
+#echo "sed -i  '/iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53/d' /etc/firewall.user">package/base-files/files/etc/rc.local
+#echo "sed -i  '/iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53/d' /etc/firewall.user">>package/base-files/files/etc/rc.local
+#echo "/etc/init.d/firewall restart">>package/base-files/files/etc/rc.local
+#echo "exit 0">>package/base-files/files/etc/rc.local
 
 # 版本号里显示一个自己的名字（281677160 build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
 sed -i "s/OpenWrt /281677160 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings

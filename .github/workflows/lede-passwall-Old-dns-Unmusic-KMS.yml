@@ -5,7 +5,7 @@
 # Copyright (C) 2019 P3TERX <https://p3terx.com>
 # <https://github.com/P3TERX/Actions-OpenWrt.git>
 #
-name: lede-passwall-Old-dns-Unmusic-KMS固件
+name: lede-SsrPlus-Unmusic-KMS固件
 on:
   workflow_dispatch:
     inputs:
@@ -151,10 +151,6 @@ jobs:
           echo "ZUOZHE=ctcgfw" >> $GITHUB_ENV
         fi
         source "${PATH1}/common.sh" && Diy_all2
-        cd package/danshui/luci-app-passwall
-        git checkout e24b58b201aa5e314ece34b5e349d2d84de55447
-        cat .git/HEAD
-        cd $OLDPWD
         if [ -n "$(ls -A "${PATH1}/files" 2>/dev/null)" ]; then
           cp -Rf "${PATH1}/files" "${Home}" && chmod -R +x ${Home}/files
         fi

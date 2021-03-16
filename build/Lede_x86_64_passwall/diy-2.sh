@@ -8,7 +8,7 @@ sed -i 's/192.168.1.1/192.168.1.3/g' package/base-files/files/bin/config_generat
 # 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
 # sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-123'' package/lean/default-settings/files/zzz-default-settings
 
-#默认不使用防火墙策略
+# 默认不使用防火墙策略
 # echo "sed -i  '/iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53/d' /etc/firewall.user">package/base-files/files/etc/rc.local
 # echo "sed -i  '/iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53/d' /etc/firewall.user">>package/base-files/files/etc/rc.local
 # echo "/etc/init.d/firewall restart">>package/base-files/files/etc/rc.local

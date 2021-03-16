@@ -9,10 +9,10 @@ sed -i 's/192.168.1.1/192.168.1.3/g' package/base-files/files/bin/config_generat
 # sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-123'' package/lean/default-settings/files/zzz-default-settings
 
 #默认不使用防火墙策略
-#echo "sed -i  '/iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53/d' /etc/firewall.user">package/base-files/files/etc/rc.local
-#echo "sed -i  '/iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53/d' /etc/firewall.user">>package/base-files/files/etc/rc.local
-#echo "/etc/init.d/firewall restart">>package/base-files/files/etc/rc.local
-#echo "exit 0">>package/base-files/files/etc/rc.local
+# echo "sed -i  '/iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53/d' /etc/firewall.user">package/base-files/files/etc/rc.local
+# echo "sed -i  '/iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53/d' /etc/firewall.user">>package/base-files/files/etc/rc.local
+# echo "/etc/init.d/firewall restart">>package/base-files/files/etc/rc.local
+# echo "exit 0">>package/base-files/files/etc/rc.local
 
 echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE">>package/network/config/firewall/files/firewall.user
 
@@ -26,7 +26,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 # sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 # 修改内核版本
-#sed -i 's/PATCHVER:=5.4/PATCHVER:=4.19/g' target/linux/x86/Makefile
+# sed -i 's/PATCHVER:=5.4/PATCHVER:=4.19/g' target/linux/x86/Makefile
 
 # 修改插件名字（修改名字后不知道会不会对插件功能有影响，自己多测试）
 sed -i 's/"BaiduPCS Web"/"百度网盘"/g' package/lean/luci-app-baidupcs-web/luasrc/controller/baidupcs-web.lua
@@ -38,7 +38,7 @@ sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-flowo
 sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-sfe/po/zh-cn/sfe.po
 sed -i 's/"实时流量监测"/"流量"/g' package/lean/luci-app-wrtbwmon/po/zh-cn/wrtbwmon.po
 sed -i 's/"KMS 服务器"/"KMS激活"/g' package/lean/luci-app-vlmcsd/po/zh-cn/vlmcsd.zh-cn.po
-#sed -i 's/"TTYD 终端"/"命令窗"/g' package/lean/luci-app-ttyd/po/zh-cn/terminal.po
+# sed -i 's/"TTYD 终端"/"命令窗"/g' package/lean/luci-app-ttyd/po/zh-cn/terminal.po
 sed -i 's/"USB 打印服务器"/"打印服务"/g' package/lean/luci-app-usb-printer/po/zh-cn/usb-printer.po
 sed -i 's/"网络存储"/"存储"/g' package/lean/luci-app-usb-printer/po/zh-cn/usb-printer.po
 sed -i 's/"Web 管理"/"Web"/g' package/lean/luci-app-webadmin/po/zh-cn/webadmin.po

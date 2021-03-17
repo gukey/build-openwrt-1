@@ -120,6 +120,8 @@ jobs:
         fi
         cp -Rf `find ./ -maxdepth 1 -type d ! -path './openwrt' ! -path './'` openwrt
         cd openwrt
+        git clone https://github.com/garypang13/openwrt-packages package/bypass
+        
 #        git clone https://github.com/xiaorouji/openwrt-passwall  package/passwall
 #        cd package/passwall
 #        git checkout e24b58b201aa5e314ece34b5e349d2d84de55447
